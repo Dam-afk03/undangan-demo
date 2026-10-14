@@ -1,0 +1,162 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-script {
+    font-family: 'Great Vibes', 'Pinyon Script', 'Alex Brush', cursive;
+  }
+  .font-pinyon {
+    font-family: 'Pinyon Script', cursive;
+  }
+  .font-cinzel {
+    font-family: 'Cinzel', Georgia, serif;
+  }
+  .font-serif-luxury {
+    font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  }
+  .font-garamond {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+  .font-sans-clean {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom wedding silver foil text and shine */
+.silver-gradient-text,
+.gold-gradient-text {
+  background: linear-gradient(135deg, #94a3b8 0%, #cbd5e1 25%, #ffffff 50%, #e2e8f0 75%, #64748b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.silver-border,
+.gold-border {
+  border-image: linear-gradient(135deg, #94a3b8, #e2e8f0, #cbd5e1) 1;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 12s linear infinite;
+}
+
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1.5deg);
+  }
+}
+
+.animate-float {
+  animation: float-gentle 4s ease-in-out infinite;
+}
+
+@keyframes pulse-subtle {
+  0%, 100% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.03);
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s ease-in-out infinite;
+}
+
+/* Luxury silver shimmer border animation */
+@keyframes silver-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer-silver-text,
+.shimmer-gold-text {
+  background: linear-gradient(90deg, #94a3b8 0%, #ffffff 50%, #94a3b8 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: silver-shimmer 4s infinite linear;
+}
+
+/* Subtle luxury card glow in silver/white */
+.luxury-silver-glow,
+.luxury-gold-glow {
+  box-shadow: 0 0 25px -5px rgba(203, 213, 225, 0.18), 0 10px 30px -10px rgba(0, 0, 0, 0.7);
+}
+
+.luxury-silver-glow-hover:hover,
+.luxury-gold-glow-hover:hover {
+  box-shadow: 0 0 35px -2px rgba(226, 232, 240, 0.28), 0 15px 35px -8px rgba(0, 0, 0, 0.8);
+}
+
+/* Ken Burns background zoom effect */
+@keyframes kenburns {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08) translate(-1%, -1%);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-kenburns {
+  animation: kenburns 24s ease-in-out infinite alternate;
+}
+
+/* Smooth reveal transition helpers */
+.luxury-card-transition {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Luxury Aesthetic Card with Double Hairline Frame in Silver/Platinum */
+.aesthetic-silver-card,
+.aesthetic-gold-card {
+  position: relative;
+  background: rgba(24, 24, 27, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(203, 213, 225, 0.3);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7), 0 0 30px -5px rgba(203, 213, 225, 0.12);
+}
+
+.aesthetic-silver-card::before,
+.aesthetic-gold-card::before {
+  content: '';
+  position: absolute;
+  inset: 5px;
+  border: 1px solid rgba(203, 213, 225, 0.14);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* Arch Card Shape */
+.aesthetic-arch-card {
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+}
+

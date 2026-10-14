@@ -1,0 +1,6 @@
+{
+  "name": "Undangan Pernikahan Digital & RSVP Luxury",
+  "description": "Platform undangan pernikahan digital interaktif dengan RSVP & Guest Management, Amplop Digital (QRIS/Bank), Galeri Estetik, Hitung Mundur, Smart Calendar, Love Story, Musik Latar, Live Streaming, dan Navigasi Peta.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
